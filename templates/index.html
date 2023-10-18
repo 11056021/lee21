@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block title%}哈囉你好嗎{% endblock title %}
+{% block headmessage %}<h3 style  = 'font-family:微軟正黑體;'>本站文章列表</a>{% endblock headmessage%}
+{% block content %} 
+{% for post in posts %}
+<p style='font-family:微軟正黑體;font-size:14pt;font-weight:bold;'>
+    <a href='/post/{{post.slug}}'>{{ post.title }}</a>
+</p>
+{% endfor %}
+{% endblock content %}
+
+
+
